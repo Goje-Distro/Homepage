@@ -1,0 +1,30 @@
+// Custom Bootstrap variable overrides go first
+// $grid-breakpoints: (xs: 0,
+//   sm: 480px,
+//   md: 640px,
+//   lg: 992px,
+//   xl: 1300px);
+
+$spacer: 1rem !default;
+$spacers: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge((0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 3),
+    6: ($spacer * 5),
+    7: ($spacer * 7),
+    8: ($spacer * 9)),
+  $spacers);
+
+$enable-rounded: false;
+$blue: #FFA96B;
+
+// Then include the following
+@import 'bootstrap/scss/bootstrap.scss';
+@import 'bootstrap-vue/src/index.scss';
+
+// And define any of your custom or additional CSS/SCSS here,
+// or via an @import
