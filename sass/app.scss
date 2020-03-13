@@ -16,7 +16,9 @@ $spacers: map-merge((0: 0,
     5: ($spacer * 3),
     6: ($spacer * 5),
     7: ($spacer * 7),
-    8: ($spacer * 9)),
+    8: ($spacer * 8),
+    9: ($spacer * 9),
+    10: ($spacer * 10)),
   $spacers);
 
 $enable-rounded: false;
@@ -28,3 +30,4 @@ $blue: #FFA96B;
 
 // And define any of your custom or additional CSS/SCSS here,
 // or via an @import
+@import 'custom';

@@ -27,7 +27,11 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [{ src: '~/plugins/swiper.js', ssr: false }],
+  plugins: [
+    // { src: '~/plugins/swiper.js', ssr: false },
+    { src: '~plugins/flickity.js', ssr: false },
+    { src: '~plugins/iconify.js' }
+  ],
   /*
    ** Nuxt.js dev-modules
    */
@@ -81,6 +85,11 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    transpile: [/vue-awesome/]
+    // extend(config, ctx) {}
+  },
+  server: {
+    port: 3000 // default: 3000
+    // host: '0.0.0.0' // default: localhost
   }
 }

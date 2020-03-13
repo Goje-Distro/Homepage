@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'Mark Pro';
+  src: url('~assets/fonts/MarkPro-Light.otf');
+}
+
+@font-face {
+  font-family: 'Mark Pro Bold';
+  src: url('~assets/fonts/MarkPro-Bold.otf');
+  font-weight: bold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Mark Pro Bold';
+  // font-weight: bolder;
+}
+
+body {
+  font-family: 'Mark Pro';
+}
+
+.fill-height {
+  height: 100vh;
+}
+
+.bg-primary-light {
+  background-color: #FFFAF7;
+}
+
+.text-bold {
+  font-family: 'Mark Pro Bold';
+}
