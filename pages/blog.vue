@@ -43,15 +43,15 @@
         </div>
         <!-- aside - related -->
         <div class="col-md-3">
-          <b-nav vertical class="text-bold">
+          <b-nav style="top: 70px;" vertical class="text-bold position-sticky">
             <b-nav-text>RELATED</b-nav-text>
-            <b-nav-item link-classes="px-0"
+            <b-nav-item link-classes="px-0 text-dark"
               >Goje partners with Drummr Africa</b-nav-item
             >
-            <b-nav-item link-classes="px-0"
+            <b-nav-item link-classes="px-0 text-dark"
               >Goje partners with Drummr Africa</b-nav-item
             >
-            <b-nav-item link-classes="px-0"
+            <b-nav-item link-classes="px-0 text-dark"
               >Goje partners with Drummr Africa</b-nav-item
             >
           </b-nav>

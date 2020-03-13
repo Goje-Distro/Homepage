@@ -13,9 +13,19 @@
       <b-collapse id="nav-collapse" is-nav>
         <!-- Right aligned nav items -->
         <b-navbar-nav class="mx-auto text-bold">
-          <b-nav-item class="ml-4" to="blog">Blog</b-nav-item>
-          <b-nav-item class="ml-4" href="#">About Us</b-nav-item>
-          <b-nav-item class="ml-4" href="#">FAQs</b-nav-item>
+          <b-nav-item
+            class="mx-4 rich-link"
+            link-classes="px-0"
+            active-class="active"
+            to="blog"
+            >Blog</b-nav-item
+          >
+          <b-nav-item class="mx-4 rich-link" link-classes="px-0" href="#"
+            >About Us</b-nav-item
+          >
+          <b-nav-item class="mx-4 rich-link" link-classes="px-0" href="#"
+            >FAQs</b-nav-item
+          >
         </b-navbar-nav>
 
         <b-navbar-nav class="ml-auto">
@@ -47,10 +57,15 @@ export default {
 </script>
 
 <style scoped lang="scss">
-// .navbar {
-//   .navbar-inner {
-//     background-color: #000000;
-//     background-image: none;
+.active {
+  width: 70%;
+  border-bottom: 2px solid white;
+}
+
+// .rich-link {
+//   &:hover {
+//     width: 50%;
+//     border-bottom: 2px solid white;
 //   }
 // }
 </style>
