@@ -57,10 +57,11 @@ export default {
       'LayoutPlugin',
       'ImagePlugin',
       'NavbarPlugin',
-      'ButtonPlugin'
-      // 'FormPlugin',
-      // 'FormCheckboxPlugin',
-      // 'FormInputPlugin',
+      'ButtonPlugin',
+      'FormPlugin',
+      'FormCheckboxPlugin',
+      'FormInputPlugin',
+      'FormGroupPlugin'
       // 'FormRadioPlugin',
       // 'ToastPlugin',
       // 'ModalPlugin',
