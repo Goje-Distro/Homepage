@@ -2,44 +2,57 @@
   <div>
     <b-navbar
       :class="{ 'navbar--hidden': !showNavbar }"
-      class="bg-transparent"
+      class="bg-navbar"
       fixed="top"
       toggleable="lg"
-      type="dark"
+      type="light"
     >
       <!-- <div class="container-fluid"> -->
       <b-navbar-brand to="/"
-        ><b-img src="~/assets/svg/logo.svg" fluid alt="Goje Logo"></b-img
+        ><b-img
+          height="20"
+          src="~/assets/svg/logo-black.svg"
+          alt="Goje Logo"
+        ></b-img
       ></b-navbar-brand>
 
       <b-navbar-toggle class="border-0" target="nav-collapse"
-        ><img src="~/assets/svg/burger.svg" alt="burger menu"
+        ><img src="~/assets/svg/burger-black.svg" alt="burger menu"
       /></b-navbar-toggle>
 
-      <b-collapse id="nav-collapse" is-nav>
+      <b-collapse id="nav-collapse" class="my-4 my-lg-0" is-nav>
         <!-- Right aligned nav items -->
-        <b-navbar-nav class="mx-auto text-bold">
+        <b-navbar-nav class="mx-auto text-bold mb-4 mb-lg-0">
           <b-nav-item
-            class="mx-4 rich-link"
+            class="my-1 my-lg-0 mx-lg-4 rich-link"
             link-classes="px-0"
             active-class="active"
             to="blog"
             >Blog</b-nav-item
           >
-          <b-nav-item class="mx-4 rich-link" link-classes="px-0" href="#"
+          <b-nav-item
+            class="my-1 my-lg-0 mx-lg-4 rich-link"
+            link-classes="px-0"
+            href="#"
             >About Us</b-nav-item
           >
-          <b-nav-item class="mx-4 rich-link" link-classes="px-0" href="#"
+          <b-nav-item
+            class="my-1 my-lg-0 mx-lg-4 rich-link"
+            link-classes="px-0"
+            href="#"
             >FAQs</b-nav-item
           >
         </b-navbar-nav>
 
         <b-navbar-nav class="ml-auto">
-          <b-nav-form class="ml-4" href="#"
-            ><b-button to="auth" class="ml-3 text-white px-4" variant="primary"
+          <b-nav-form class="ml-lg-4" href="#"
+            ><b-button
+              to="auth"
+              class="text-white ml-lg-3 px-4"
+              variant="primary"
               >Sign Up</b-button
             >
-            <b-button class="ml-3 text-white px-4" variant="outline-primary"
+            <b-button class="text-dark ml-lg-3 px-4" variant="outline-primary"
               >Login</b-button
             ></b-nav-form
           >
@@ -52,11 +65,13 @@
 
 <script>
 // import { BNavbar, BNavbarNav, BNavbarBrand, BNavbarToggle } from 'bootstrap-vue'
+const OFFSET = 60
 export default {
   data() {
     return {
       showNavbar: true,
       lastScrollPosition: 0,
+      scrollValue: 0,
       colorNav: false
     }
   },
@@ -70,22 +85,14 @@ export default {
   },
   methods: {
     onScroll() {
-      // Get the current scroll position
-      const currentScrollPosition =
-        window.pageYOffset || document.documentElement.scrollTop
-      // Because of momentum scrolling on mobiles, we shouldn't continue if it is less than zero
-      if (currentScrollPosition < 0) {
+      if (window.pageYOffset < 0) {
         return
       }
-
-      // Here we determine whether we need to show or hide the navbar
-      this.showNavbar = currentScrollPosition < this.lastScrollPosition
-      // Set the current scroll position as the last scroll position
-      this.lastScrollPosition = currentScrollPosition
-
-      if (currentScrollPosition > 30) {
-        this.colorNav = true
+      if (Math.abs(window.pageYOffset - this.lastScrollPosition) < OFFSET) {
+        return
       }
+      this.showNavbar = window.pageYOffset < this.lastScrollPosition
+      this.lastScrollPosition = window.pageYOffset
     }
   }
 }

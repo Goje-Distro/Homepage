@@ -65,7 +65,7 @@
     </div>
 
     <!-- Distribute Section -->
-    <div id="distribute" class="container-fluid py-5 bg-primary-light">
+    <div id="distribute" class="py-5 bg-primary-light">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-6 order-1 order-md-2 mb-4 mb-md-0">
@@ -289,23 +289,18 @@ export default {
         // pageDots: true,
         // wrapAround: false,
         cellAlign: 'center'
-        // arrowShape:
-        //   'M40.2929 56.2929C39.9024 56.6834 39.9024 57.3166 40.2929 57.7071L46.6569 64.0711C47.0474 64.4616 47.6805 64.4616 48.0711 64.0711C48.4616 63.6805 48.4616 63.0474 48.0711 62.6569L42.4142 57L48.0711 51.3431C48.4616 50.9526 48.4616 50.3195 48.0711 49.9289C47.6805 49.5384 47.0474 49.5384 46.6569 49.9289L40.2929 56.2929ZM74 56L41 56L41 58L74 58L74 56Z'
-        // any options from Flickity can be used
       }
     }
+  },
+  mounted() {
+    this.$nextTick().then(() => {
+      this.$refs.flickity.rerender()
+    })
   }
-  // mounted() {
-  //   this.$nextTick().then(() => {
-  //     this.$refs.flickity.arrowShape(
-  //       'M 0,50 L 60,00 L 50,30 L 80,30 L 80,70 L 50,70 L 60,100 Z'
-  //     )
-  //   })
-  // }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" bg-navbar>
 .promote-carousel-cell {
   width: 60%;
   // height: 160px;
@@ -385,5 +380,10 @@ export default {
 .flickity-prev-next-button.next {
   right: 15%;
   top: 70%;
+}
+.flickity-button {
+  @media only screen and (max-width: 640px) {
+    display: none;
+  }
 }
 </style>
