@@ -18,7 +18,7 @@
               fans around the world and also monetize your music. Sign up today
               for just &#8358;7,000/year.
             </p>
-            <b-button class="text-white px-5 py-3" variant="primary"
+            <b-button to="auth" class="text-white px-5 py-3" variant="primary"
               >Sign up</b-button
             >
           </div>
@@ -76,6 +76,7 @@
               songs across the globe with over 150 streaming platforms.
             </p>
             <b-button
+              to="/auth"
               variant="primary"
               size="sm"
               class="text-white px-5 py-3 px-lg-4 py-lg-2"
@@ -104,6 +105,7 @@
             optimum quality
           </p>
           <b-button
+            to="/auth"
             variant="primary"
             size="sm"
             class="text-white px-5 py-3 px-lg-4 py-lg-2"
@@ -220,6 +222,7 @@
             License your music to moviemakers and brands etc. and break bank
           </p>
           <b-button
+            to="/auth"
             variant="primary"
             size="sm"
             class="text-white px-5 py-3 px-lg-4 py-lg-2"
@@ -245,6 +248,7 @@
           <h1>Sign up today!</h1>
           <p class="my-4">For just &#8358;7,000 per month</p>
           <b-button
+            to="/auth"
             variant="light"
             size="sm"
             class="text-primary px-5 py-3 px-lg-4 py-lg-2"

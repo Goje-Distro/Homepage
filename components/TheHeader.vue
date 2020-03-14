@@ -1,6 +1,12 @@
 <template>
   <div>
-    <b-navbar class="" fixed="top" toggleable="lg" type="dark" variant="dark">
+    <b-navbar
+      :class="{ 'navbar--hidden': !showNavbar }"
+      class="bg-transparent"
+      fixed="top"
+      toggleable="lg"
+      type="dark"
+    >
       <!-- <div class="container-fluid"> -->
       <b-navbar-brand to="/"
         ><b-img src="~/assets/svg/logo.svg" fluid alt="Goje Logo"></b-img
@@ -30,7 +36,7 @@
 
         <b-navbar-nav class="ml-auto">
           <b-nav-form class="ml-4" href="#"
-            ><b-button class="ml-3 text-white px-4" variant="primary"
+            ><b-button to="auth" class="ml-3 text-white px-4" variant="primary"
               >Sign Up</b-button
             >
             <b-button class="ml-3 text-white px-4" variant="outline-primary"
@@ -47,12 +53,41 @@
 <script>
 // import { BNavbar, BNavbarNav, BNavbarBrand, BNavbarToggle } from 'bootstrap-vue'
 export default {
-  // components: {
-  //   BNavbar,
-  //   BNavbarNav,
-  //   BNavbarBrand,
-  //   BNavbarToggle
-  // }
+  data() {
+    return {
+      showNavbar: true,
+      lastScrollPosition: 0,
+      colorNav: false
+    }
+  },
+
+  mounted() {
+    window.addEventListener('scroll', this.onScroll)
+  },
+
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.onScroll)
+  },
+  methods: {
+    onScroll() {
+      // Get the current scroll position
+      const currentScrollPosition =
+        window.pageYOffset || document.documentElement.scrollTop
+      // Because of momentum scrolling on mobiles, we shouldn't continue if it is less than zero
+      if (currentScrollPosition < 0) {
+        return
+      }
+
+      // Here we determine whether we need to show or hide the navbar
+      this.showNavbar = currentScrollPosition < this.lastScrollPosition
+      // Set the current scroll position as the last scroll position
+      this.lastScrollPosition = currentScrollPosition
+
+      if (currentScrollPosition > 30) {
+        this.colorNav = true
+      }
+    }
+  }
 }
 </script>
 
