@@ -1,7 +1,7 @@
 {
   "name": "goje-nuxt",
   "version": "1.0.0",
-  "description": "Goje Distro Application using Nuxt.js",
+  "description": "Distributing African music on Spotify, iTunes, Deezer & More",
   "author": "Richard Saseun",
   "private": true,
   "scripts": {
