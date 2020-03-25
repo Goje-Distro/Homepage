@@ -31,7 +31,7 @@ export default {
    */
   plugins: [
     // { src: '@/plugins/nuxt-swiper.plugin.js', ssr: false },
-    { src: '@/plugins/flickity.js', ssr: false },
+    // { src: '@/plugins/flickity.js', ssr: false },
     { src: '@/plugins/iconify.js' }
   ],
   /*

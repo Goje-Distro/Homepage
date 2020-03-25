@@ -116,90 +116,34 @@
     </div>
 
     <!-- Promote Section -->
-    <div id="promote" class="container-fluid py-6 bg-primary-light">
-      <!-- <div class="container"> -->
-      <div class="row justify-content-center">
-        <div class="col-md-10 text-center">
-          <h1 class="">Promote</h1>
-          <p class="mb-6 px-md-7">
-            Let people get to know the person behind the music. Reach out and
-            engage with fans from all around Africa and beyond.
-          </p>
-          <!-- nested row -->
-          <client-only>
-            <flickity :options="promoteOptions" class="d-block d-lg-none">
-              <div class="promote-carousel-cell text-center">
-                <img
-                  class="img-fluid mx-auto d-block pb-4"
-                  src="~/assets/svg/radio.svg"
-                />
-                <h5>Radio</h5>
-                <p class="px-4">
-                  Get your music featured on radio stations
-                </p>
-              </div>
-              <div class="promote-carousel-cell text-center">
-                <img
-                  class="img-fluid mx-auto d-block pb-4"
-                  src="~/assets/svg/playlist.svg"
-                />
-                <h5>Playlist Pitching</h5>
-                <p class="px-4">
-                  Pitch your music to be featured on popular playlists
-                </p>
-              </div>
-              <div class="promote-carousel-cell text-center">
-                <img
-                  class="img-fluid mx-auto d-block pb-4"
-                  src="~/assets/svg/television.svg"
-                />
-                <h5>Television</h5>
-                <p class="px-4">
-                  Get your music featured on television channels
-                </p>
-              </div>
-            </flickity>
-
-            <div class="d-none d-lg-block">
-              <div class="row">
-                <div class="col-md-4 text-center">
-                  <img
-                    class="img-fluid mx-auto d-block pb-4"
-                    src="~/assets/svg/radio.svg"
-                  />
-                  <h5>Radio</h5>
-                  <p class="px-4">
-                    Get your music featured on radio stations
-                  </p>
-                </div>
-                <!-- ----------------------------------- -->
-                <div class="col-md-4 text-center">
-                  <img
-                    class="img-fluid mx-auto d-block pb-4"
-                    src="~/assets/svg/playlist.svg"
-                  />
-                  <h5>Playlist Pitching</h5>
-                  <p class="px-4">
-                    Pitch your music to be featured on popular playlists
-                  </p>
-                </div>
-                <!-- ----------------------------------- -->
-                <div class="col-md-4 text-center">
-                  <img
-                    class="img-fluid mx-auto d-block pb-4"
-                    src="~/assets/svg/television.svg"
-                  />
-                  <h5>Television</h5>
-                  <p class="px-4">
-                    Get your music featured on television channels
-                  </p>
-                </div>
-              </div>
-            </div>
-          </client-only>
+    <div id="promote" class="py-5 bg-primary-light">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 order-1 order-md-2 mb-4 mb-md-0">
+            <!-- <div> -->
+            <h1>Promote</h1>
+            <p class="mb-5">
+              Upload your music to video hosting services such as VEVO, Amazon
+              Video, Apple Music Video, MTV Base and many others!
+            </p>
+            <b-button
+              to="/auth"
+              variant="primary"
+              size="sm"
+              class="text-white px-5 py-3 px-lg-4 py-lg-2"
+              >Sign up</b-button
+            >
+            <!-- </div> -->
+          </div>
+          <!-- ------------------------------- -->
+          <div class="col-md-6 order-2 order-md-1">
+            <img
+              class="img-fluid mx-auto float-right d-block p-3"
+              src="~/assets/promote.png"
+            />
+          </div>
         </div>
       </div>
-      <!-- </div> -->
     </div>
 
     <!-- Monetize Section -->
@@ -269,14 +213,6 @@ export default {
   },
   data() {
     return {
-      promoteOptions: {
-        initialIndex: 1,
-        prevNextButtons: false,
-        pageDots: false,
-        draggable: true,
-        cellAlign: 'center'
-        // groupCells: true
-      }
       // flickityOptions: {
       //   fade: true,
       //   // groupCells: true,
@@ -352,40 +288,6 @@ export default {
 
   display: block;
   object-fit: cover;
-}
-
-/* position dots in carousel */
-.flickity-page-dots {
-  bottom: 8%;
-}
-/* white circles */
-.flickity-page-dots .dot {
-  width: 12px;
-  height: 12px;
-  margin: 0 15px;
-  opacity: 1;
-  background: gray;
-  // border: 2px solid white;
-}
-/* fill-in selected dot */
-.flickity-page-dots .dot .is-selected {
-  background: white;
-  position: relative;
-  // padding: 10px;
-  &::before {
-    content: '';
-    display: block;
-    // padding: 10px;
-    border-radius: 50%;
-    position: absolute;
-    width: 35px;
-    height: 35px;
-    left: 50%;
-    margin-left: -18px;
-    top: 50%;
-    margin-top: -18px;
-    border: 1px solid white;
-  }
 }
 
 .hooper-prev .hooper-next {
