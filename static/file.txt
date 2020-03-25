@@ -1,0 +1,40 @@
+<!-- <flickity ref="flickity" :options="flickityOptions">
+        <div
+          class="carousel-cell d-flex align-items-center justify-content-center"
+        >
+          <div
+            class="hero-text container position-absolute text-white text-center"
+          >
+            <h1 class>
+              Make your <span class="text-primary">music</span><br />
+              Let us be your label
+            </h1>
+            <p class="my-5 px-0 px-md-10">
+              Every artist deserve Goje, use out the tools to reach millions of
+              fans around the world and also monetize your music. Sign up today
+              for just &#8358;7,000/year.
+            </p>
+            <b-button to="auth" class="text-white px-5 py-3" variant="primary"
+              >Sign up</b-button
+            >
+          </div>
+          <img class="carousel-image" src="~assets/hero.png" />
+        </div>
+        <div class="carousel-cell ">
+          <img class="carousel-image" src="~assets/hero.png" />
+        </div>
+      </flickity> -->
+      <!-- <div class="mt-n6 d-flex align-items-center justify-content-center">
+        <div>
+          <img
+            src="~/assets/svg/slide-left.svg"
+            alt="Navigate Left on Slider"
+          />
+        </div>
+        <div>
+          <img
+            src="~/assets/svg/slide-right.svg"
+            alt="Navigate Left on Slider"
+          />
+        </div>
+      </div> -->

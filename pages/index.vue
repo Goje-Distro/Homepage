@@ -2,46 +2,39 @@
   <div>
     <!-- Hero Slider -->
     <div id="slider">
-      <flickity ref="flickity" :options="flickityOptions">
-        <div
-          class="carousel-cell d-flex align-items-center justify-content-center"
-        >
+      <hooper class="hooper-wrapper" :wheel-control="false">
+        <slide>
           <div
-            class="hero-text container position-absolute text-white text-center"
+            class="carousel-cell d-flex align-items-center justify-content-center"
           >
-            <h1 class>
-              Make your <span class="text-primary">music</span><br />
-              Let us be your label
-            </h1>
-            <p class="my-5 px-0 px-md-10">
-              Every artist deserve Goje, use out the tools to reach millions of
-              fans around the world and also monetize your music. Sign up today
-              for just &#8358;7,000/year.
-            </p>
-            <b-button to="auth" class="text-white px-5 py-3" variant="primary"
-              >Sign up</b-button
+            <div
+              class="hero-text container position-absolute text-white text-center"
             >
+              <h1 class>
+                Make your <span class="text-primary">music</span><br />
+                Let us be your label
+              </h1>
+              <p class="my-5 px-0 px-md-10">
+                Every artist deserve Goje, use out the tools to reach millions
+                of fans around the world and also monetize your music. Sign up
+                today for just &#8358;7,000/year.
+              </p>
+              <b-button to="auth" class="text-white px-5 py-3" variant="primary"
+                >Sign up</b-button
+              >
+            </div>
+            <img class="carousel-image" src="~assets/hero.png" />
           </div>
-          <img class="carousel-image" src="~assets/hero.png" />
-        </div>
-        <div class="carousel-cell ">
-          <img class="carousel-image" src="~assets/hero.png" />
-        </div>
-      </flickity>
-      <!-- <div class="mt-n6 d-flex align-items-center justify-content-center">
-        <div>
-          <img
-            src="~/assets/svg/slide-left.svg"
-            alt="Navigate Left on Slider"
-          />
-        </div>
-        <div>
-          <img
-            src="~/assets/svg/slide-right.svg"
-            alt="Navigate Left on Slider"
-          />
-        </div>
-      </div> -->
+        </slide>
+        <slide>
+          <div class="carousel-cell">
+            <img class="carousel-image" src="~assets/hero.png" />
+          </div>
+        </slide>
+
+        <hooper-navigation slot="hooper-addons"></hooper-navigation>
+        <hooper-pagination slot="hooper-addons"></hooper-pagination>
+      </hooper>
     </div>
 
     <!-- Hero intro -->
@@ -145,7 +138,6 @@
                   Get your music featured on radio stations
                 </p>
               </div>
-              <!-- ----------------------------------- -->
               <div class="promote-carousel-cell text-center">
                 <img
                   class="img-fluid mx-auto d-block pb-4"
@@ -156,7 +148,6 @@
                   Pitch your music to be featured on popular playlists
                 </p>
               </div>
-              <!-- ----------------------------------- -->
               <div class="promote-carousel-cell text-center">
                 <img
                   class="img-fluid mx-auto d-block pb-4"
@@ -261,14 +252,21 @@
 </template>
 
 <script>
-// import axios from 'axios'
-// import AppLogo from '~/components/AppLogo.vue'
+import {
+  Hooper,
+  Slide,
+  Navigation as HooperNavigation,
+  Pagination as HooperPagination
+} from 'hooper'
 // import Flickity from 'vue-flickity'
 
 export default {
-  // components: {
-  //   Flickity
-  // },
+  components: {
+    Hooper,
+    Slide,
+    HooperNavigation,
+    HooperPagination
+  },
   data() {
     return {
       promoteOptions: {
@@ -278,29 +276,61 @@ export default {
         draggable: true,
         cellAlign: 'center'
         // groupCells: true
-      },
-      flickityOptions: {
-        fade: true,
-        // groupCells: true,
-        freeScroll: false,
-        draggable: false,
-        initialIndex: 0,
-        prevNextButtons: true,
-        // pageDots: true,
-        // wrapAround: false,
-        cellAlign: 'center'
       }
+      // flickityOptions: {
+      //   fade: true,
+      //   // groupCells: true,
+      //   freeScroll: false,
+      //   draggable: false,
+      //   initialIndex: 0,
+      //   prevNextButtons: true,
+      //   // pageDots: true,
+      //   // wrapAround: false,
+      //   cellAlign: 'center'
+      // }
     }
-  },
-  mounted() {
-    this.$nextTick().then(() => {
-      this.$refs.flickity.rerender()
-    })
   }
 }
 </script>
 
-<style lang="scss" bg-navbar>
+<style lang="scss">
+.hooper-wrapper {
+  height: 95vh;
+}
+
+.hooper-pagination {
+  margin-bottom: 30px;
+}
+
+.hooper-indicator {
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  margin: 0 15px;
+  opacity: 1;
+  background: gray;
+}
+
+.hooper-indicator.is-active {
+  background: white;
+  position: relative;
+  // padding: 10px;
+  &::before {
+    content: '';
+    display: block;
+    // padding: 10px;
+    border-radius: 50%;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 50%;
+    margin-left: -18px;
+    top: 50%;
+    margin-top: -18px;
+    border: 1px solid white;
+  }
+}
+
 .promote-carousel-cell {
   width: 60%;
   // height: 160px;
@@ -338,7 +368,7 @@ export default {
   // border: 2px solid white;
 }
 /* fill-in selected dot */
-.flickity-page-dots .dot.is-selected {
+.flickity-page-dots .dot .is-selected {
   background: white;
   position: relative;
   // padding: 10px;
@@ -356,6 +386,10 @@ export default {
     margin-top: -18px;
     border: 1px solid white;
   }
+}
+
+.hooper-prev .hooper-next {
+  left: 15%;
 }
 
 .flickity-prev-next-button {

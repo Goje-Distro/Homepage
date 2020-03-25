@@ -52,7 +52,10 @@
               variant="primary"
               >Sign Up</b-button
             >
-            <b-button class="text-dark ml-lg-3 px-4" variant="outline-primary"
+            <b-button
+              :to="{ path: 'auth', query: { type: 'login' } }"
+              class="text-dark ml-lg-3 px-4"
+              variant="outline-primary"
               >Login</b-button
             ></b-nav-form
           >

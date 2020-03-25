@@ -21,18 +21,18 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#FFA96B' },
+  loading: { color: '#FFA96B', height: '5px' },
   /*
    ** Global CSS
    */
-  css: ['@/sass/app.scss', 'swiper/dist/css/swiper.css'],
+  css: ['@/sass/app.scss', 'swiper/css/swiper.css', 'hooper/dist/hooper.css'],
   /*
    ** Plugins to load before mounting the App
    */
   plugins: [
-    // { src: '~/plugins/swiper.js', ssr: false },
-    { src: '~plugins/flickity.js', ssr: false },
-    { src: '~plugins/iconify.js' }
+    // { src: '@/plugins/nuxt-swiper.plugin.js', ssr: false },
+    { src: '@/plugins/flickity.js', ssr: false },
+    { src: '@/plugins/iconify.js' }
   ],
   /*
    ** Nuxt.js dev-modules
@@ -63,10 +63,8 @@ export default {
       'FormPlugin',
       'FormCheckboxPlugin',
       'FormInputPlugin',
-      'FormGroupPlugin'
-      // 'FormRadioPlugin',
-      // 'ToastPlugin',
-      // 'ModalPlugin',
+      'FormGroupPlugin',
+      'LinkPlugin'
     ],
     directivePlugins: [
       'VBPopoverPlugin',
