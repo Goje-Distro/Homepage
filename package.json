@@ -19,7 +19,6 @@
     "bootstrap-vue": "^2.0.0",
     "hooper": "^0.3.4",
     "nuxt": "^2.0.0",
-    "swiper": "^5.3.6",
     "vue-awesome": "^4.0.2",
     "vue-flickity": "^1.2.1"
   },

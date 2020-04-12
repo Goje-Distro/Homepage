@@ -1,14 +1,14 @@
-<template
-  ><div class="mt-7">
+<template>
+  <div class="mt-7">
     <div class="container">
       <div class="row">
         <!-- blog -->
         <div class="col-md-9">
           <div class="post mb-6">
-            <img class="img-fluid" src="~/assets/blog.png" alt="" />
+            <img class="img-fluid" src="~/assets/blog.png" alt />
             <p class="text-uppercase my-4">march 12, 2020</p>
             <h1>Goje partners with Drummr Africa</h1>
-            <p class="">
+            <p class>
               With a flat rate subscription create and manage activities from
               your personalized account.
             </p>
@@ -17,10 +17,10 @@
             >
           </div>
           <div class="post mb-6">
-            <img class="img-fluid" src="~/assets/blog.png" alt="" />
+            <img class="img-fluid" src="~/assets/blog.png" alt />
             <p class="text-uppercase my-4">march 12, 2020</p>
             <h1>Goje partners with Drummr Africa</h1>
-            <p class="">
+            <p class>
               With a flat rate subscription create and manage activities from
               your personalized account.
             </p>
@@ -29,10 +29,10 @@
             >
           </div>
           <div class="post mb-6">
-            <img class="img-fluid" src="~/assets/blog.png" alt="" />
+            <img class="img-fluid" src="~/assets/blog.png" alt />
             <p class="text-uppercase my-4">march 12, 2020</p>
             <h1>Goje partners with Drummr Africa</h1>
-            <p class="">
+            <p class>
               With a flat rate subscription create and manage activities from
               your personalized account.
             </p>
@@ -58,8 +58,8 @@
         </div>
       </div>
     </div>
-  </div></template
->
+  </div>
+</template>
 
 <script>
 export default {

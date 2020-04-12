@@ -2,7 +2,22 @@
   <div>
     <!-- Hero Slider -->
     <div id="slider">
-      <hooper class="hooper-wrapper" :wheel-control="false">
+      <div class="pt-10 container text-white text-center">
+        <h1 class>
+          Make your <span class="text-primary">music</span><br />
+          Let us be your label
+        </h1>
+        <p class="my-5 px-0 px-md-10">
+          Every artist deserve Goje, use out the tools to reach millions of fans
+          around the world and also monetize your music. Sign up today for just
+          &#8358;7,000/year.
+        </p>
+        <b-button to="auth" class="text-white px-5 py-3" variant="primary"
+          >Sign up</b-button
+        >
+      </div>
+
+      <!-- <hooper class="hooper-wrapper" :wheel-control="false">
         <slide>
           <div
             class="carousel-cell d-flex align-items-center justify-content-center"
@@ -34,7 +49,7 @@
 
         <hooper-navigation slot="hooper-addons"></hooper-navigation>
         <hooper-pagination slot="hooper-addons"></hooper-pagination>
-      </hooper>
+      </hooper> -->
     </div>
 
     <!-- Hero intro -->
@@ -196,20 +211,20 @@
 </template>
 
 <script>
-import {
-  Hooper,
-  Slide,
-  Navigation as HooperNavigation,
-  Pagination as HooperPagination
-} from 'hooper'
+// import {
+// Hooper,
+// Slide,
+// Navigation as HooperNavigation,
+// Pagination as HooperPagination
+// } from 'hooper'
 // import Flickity from 'vue-flickity'
 
 export default {
   components: {
-    Hooper,
-    Slide,
-    HooperNavigation,
-    HooperPagination
+    // Hooper,
+    // Slide,
+    // HooperNavigation,
+    // HooperPagination
   },
   data() {
     return {

@@ -7,8 +7,13 @@ export default {
   head: {
     title: 'Sell Your Music Online - Digital Music Distribution | Goje Distro',
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      {
+        charset: 'utf-8'
+      },
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1'
+      },
       {
         hid: 'description',
         name: 'description',
@@ -16,23 +21,34 @@ export default {
           'Distributing African music on Spotify, iTunes, Deezer & More. Free Sign Up.'
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }]
+    link: [
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon.png'
+      }
+    ]
   },
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#FFA96B', height: '5px' },
+  loading: {
+    color: '#FFA96B',
+    height: '5px'
+  },
   /*
    ** Global CSS
    */
-  css: ['@/sass/app.scss', 'swiper/css/swiper.css', 'hooper/dist/hooper.css'],
+  css: ['@/sass/app.scss', 'hooper/dist/hooper.css'],
   /*
    ** Plugins to load before mounting the App
    */
   plugins: [
     // { src: '@/plugins/nuxt-swiper.plugin.js', ssr: false },
     // { src: '@/plugins/flickity.js', ssr: false },
-    { src: '@/plugins/iconify.js' }
+    {
+      src: '@/plugins/iconify.js'
+    }
   ],
   /*
    ** Nuxt.js dev-modules
